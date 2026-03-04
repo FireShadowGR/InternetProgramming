@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow – About</title>
+  <meta name="description" content="Learn more about the TaskFlow application and team.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/taskflow-logo.png" alt="TaskFlow logo" width="32" height="32" class="me-2">
+        <span>TaskFlow</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <button id="darkModeToggle" class="btn btn-outline-light btn-sm me-2" type="button" aria-label="Toggle dark mode">
+            🌙
+          </button>
+          <a href="tasks.html" class="btn btn-light btn-sm">View Tasks</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="pt-5 mt-4">
+  <!-- About app -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <h1 class="h2 mb-3">About TaskFlow</h1>
+          <p>
+            TaskFlow is a task management application designed to help teams and individuals keep track of their work,
+            deadlines, and priorities in a simple and intuitive way.
+          </p>
+          <p>
+            With TaskFlow you can create tasks, assign priorities, visualize progress through analytics, and stay
+            motivated with built-in productivity boosters.
+          </p>
+          <ul class="list-unstyled mb-0">
+            <li>• Clear overview of pending and completed work.</li>
+            <li>• Priority-based organization for better focus.</li>
+            <li>• Responsive design that works on any device.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 mb-3">Our mission</h2>
+              <p class="mb-0">
+                We want to make managing tasks less stressful and more transparent, so that teams can spend less time
+                organizing and more time delivering high-quality work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team grid -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="h3 mb-4 text-center">Meet the Team</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="https://via.placeholder.com/300x200?text=Alex+Rivera" class="card-img-top" alt="Portrait of Alex Rivera, Product Manager">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1">Alex Rivera</h3>
+              <p class="text-muted mb-2">Product Manager</p>
+              <p class="card-text small">
+                Alex defines the roadmap, ensuring that TaskFlow stays focused on solving real productivity problems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="https://via.placeholder.com/300x200?text=Jamie+Kostas" class="card-img-top" alt="Portrait of Jamie Kostas, Lead Developer">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1">Jamie Kostas</h3>
+              <p class="text-muted mb-2">Lead Developer</p>
+              <p class="card-text small">
+                Jamie builds the core of TaskFlow, focusing on performance, reliability, and a smooth user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="https://via.placeholder.com/300x200?text=Maya+Li" class="card-img-top" alt="Portrait of Maya Li, UX Designer">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1">Maya Li</h3>
+              <p class="text-muted mb-2">UX Designer</p>
+              <p class="card-text small">
+                Maya designs clear, accessible interfaces so users can quickly understand their priorities and next steps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials carousel -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h3 mb-4 text-center">What people say about TaskFlow</h2>
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="TaskFlow testimonials">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center">
+              <p class="lead text-center mb-3">
+                “TaskFlow helped our team reduce missed deadlines and keep everyone on the same page.”
+              </p>
+              <p class="mb-0 text-muted">Sofia, Project Coordinator</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center">
+              <p class="lead text-center mb-3">
+                “The analytics view gives me a quick snapshot of what still needs attention.”
+              </p>
+              <p class="mb-0 text-muted">Nikos, Team Lead</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center">
+              <p class="lead text-center mb-3">
+                “I love that TaskFlow works just as well on my phone as on my laptop.”
+              </p>
+              <p class="mb-0 text-muted">Maria, Freelancer</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-3 mb-md-0">
+      <span class="fw-bold">TaskFlow</span> © <span id="footerYear"></span> All rights reserved.
+    </div>
+    <div>
+      <a href="mailto:info@taskflow.app" class="text-light me-3">info@taskflow.app</a>
+      <a href="#" class="text-light me-2" aria-label="TaskFlow on Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light me-2" aria-label="TaskFlow on LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-light" aria-label="TaskFlow on GitHub"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
