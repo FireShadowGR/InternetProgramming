@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow – Home</title>
+  <meta name="description" content="TaskFlow - Task management application.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Optional: Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/taskflow-logo.png" alt="TaskFlow logo" width="32" height="32" class="me-2">
+        <span>TaskFlow</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <button id="darkModeToggle" class="btn btn-outline-light btn-sm me-2" type="button" aria-label="Toggle dark mode">
+            🌙
+          </button>
+          <a href="tasks.html" class="btn btn-light btn-sm">View Tasks</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="pt-5 mt-4">
+  <!-- Hero / Welcome -->
+  <section class="py-5 bg-light" id="home-hero">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold mb-3">
+            Stay on top of your tasks with <span class="text-primary">TaskFlow</span>
+          </h1>
+          <p class="lead">
+            Organize, prioritize, and complete your work efficiently with a clean and powerful task management tool.
+          </p>
+          <ul class="list-unstyled mb-4">
+            <li>• Create, edit, and complete tasks in seconds.</li>
+            <li>• Visualize productivity with built-in analytics.</li>
+            <li>• Access your tasks from any device with a responsive layout.</li>
+          </ul>
+          <a href="tasks.html" class="btn btn-primary btn-lg me-2">Get Started</a>
+          <a href="#latest-activity" class="btn btn-outline-primary btn-lg">View Activity</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 mb-3">Today at a glance</h2>
+              <p class="mb-1"><strong>Total tasks:</strong> <span id="homeTotalTasks">0</span></p>
+              <p class="mb-1"><strong>Completed:</strong> <span id="homeCompletedTasks">0</span></p>
+              <p class="mb-3"><strong>Pending:</strong> <span id="homePendingTasks">0</span></p>
+              <p class="text-muted mb-0 small">These numbers are updated from your Tasks page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Activity -->
+  <section class="py-5" id="latest-activity">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h3 mb-0">Latest Activity</h2>
+        <a href="tasks.html" class="btn btn-sm btn-outline-primary">Manage Tasks</a>
+      </div>
+      <p class="text-muted mb-3">Recent changes to your tasks appear here.</p>
+
+      <div id="latestActivityList" class="list-group mb-3">
+        <!-- Filled dynamically -->
+      </div>
+
+      <p id="noActivityMessage" class="text-muted">No activity yet. Add your first task to get started.</p>
+    </div>
+  </section>
+
+  <!-- Motivational quote (API) -->
+  <section class="py-5 bg-light" id="motivation">
+    <div class="container">
+      <h2 class="h3 mb-3">Motivational Quote</h2>
+      <p class="text-muted">A little boost to keep you productive.</p>
+      <figure class="border rounded p-3 bg-white shadow-sm">
+        <blockquote class="blockquote mb-2" id="quoteText">Loading quote...</blockquote>
+        <figcaption class="blockquote-footer mb-0" id="quoteAuthor"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Mini analytics (chart placeholders – you can wire Chart.js here later) -->
+  <section class="py-5" id="analytics-overview">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h3 mb-0">Analytics Overview</h2>
+        <a href="analytics.html" class="btn btn-sm btn-outline-primary">View detailed analytics</a>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 mb-3">Completed vs Pending</h3>
+              <canvas id="homeStatusChart" aria-label="Completed vs pending tasks chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 mb-3">Tasks by priority</h3>
+              <canvas id="homePriorityChart" aria-label="Tasks by priority chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-3 mb-md-0">
+      <span class="fw-bold">TaskFlow</span> © <span id="footerYear"></span> All rights reserved.
+    </div>
+    <div>
+      <a href="mailto:info@taskflow.app" class="text-light me-3">info@taskflow.app</a>
+      <a href="#" class="text-light me-2" aria-label="TaskFlow on Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light me-2" aria-label="TaskFlow on LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-light" aria-label="TaskFlow on GitHub"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/analytics.js"></script> <!-- optional, if you reuse logic -->
+</body>
+</html>

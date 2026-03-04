@@ -1,0 +1,91 @@
+/* css/styles.css - COMPLETE FILE */
+
+/* Dark mode support */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --bs-card-bg: #ffffff;
+  --bs-primary: #0d6efd;
+}
+
+html[data-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #f8f9fa;
+  --bs-card-bg: #1e1e1e;
+  --bs-primary: #0d6efd;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--bs-card-bg);
+  border-color: var(--bs-border-color-translucent);
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Fix navbar text */
+html[data-theme="dark"] .navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,0.8);
+}
+
+html[data-theme="dark"] .navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Fix carousel text */
+html[data-theme="dark"] #testimonialsCarousel .carousel-item {
+  color: var(--bs-body-color);
+}
+
+html[data-theme="dark"] .blockquote {
+  color: var(--bs-body-color);
+}
+
+/* Layout fixes */
+main {
+  min-height: 60vh;
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Table improvements */
+.table {
+  --bs-table-bg: var(--bs-card-bg);
+}
+
+html[data-theme="dark"] .table {
+  --bs-table-color: var(--bs-body-color);
+  color: var(--bs-body-color);
+}
+
+/* Form improvements */
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #f8f9fa;
+}
+
+html[data-theme="dark"] .form-control:focus,
+html[data-theme="dark"] .form-select:focus {
+  background-color: #2d2d2d;
+  border-color: var(--bs-primary);
+  color: #f8f9fa;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25);
+}
+
+/* Badge fixes */
+html[data-theme="dark"] .badge.bg-warning {
+  color: #000;
+}
