@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TaskForge logo">
+  <defs>
+    <linearGradient id="tf-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#6610f2"/>
+    </linearGradient>
+  </defs>
+  <!-- Anvil / forge base -->
+  <path d="M16 80 L112 80 L100 96 H28 L16 80 Z" fill="#111827"/>
+  <!-- Body -->
+  <rect x="28" y="28" width="72" height="44" rx="8" fill="url(#tf-gradient)"/>
+  <!-- Checklist lines -->
+  <rect x="40" y="38" width="40" height="4" rx="2" fill="#ffffff" opacity="0.9"/>
+  <rect x="40" y="48" width="32" height="4" rx="2" fill="#ffffff" opacity="0.9"/>
+  <rect x="40" y="58" width="24" height="4" rx="2" fill="#ffffff" opacity="0.9"/>
+  <!-- Check icon -->
+  <path d="M82 54 L76 60 L72 56" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
