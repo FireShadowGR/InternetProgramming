@@ -5,7 +5,7 @@
   const html = document.documentElement;
   const toggleBtn = document.getElementById('darkModeToggle');
 
-  const savedTheme = localStorage.getItem('taskflow-theme');
+  const savedTheme = localStorage.getItem('taskforge-theme');
   if (savedTheme === 'dark') {
     html.setAttribute('data-theme', 'dark');
   }
@@ -18,7 +18,7 @@
       const now = html.getAttribute('data-theme') || 'light';
       const next = now === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', next);
-      localStorage.setItem('taskflow-theme', next);
+      localStorage.setItem('taskforge-theme', next);
       toggleBtn.textContent = next === 'dark' ? '☀️' : '🌙';
     });
   }
@@ -35,7 +35,7 @@
 // --- Task helpers (shared) ---
 function getStoredTasks() {
   try {
-    const data = localStorage.getItem('taskflow-tasks');
+    const data = localStorage.getItem('taskforge-tasks');
     return data ? JSON.parse(data) : [];
   } catch (e) {
     console.error('Failed to parse tasks from localStorage', e);
@@ -45,7 +45,7 @@ function getStoredTasks() {
 
 function getStoredActivity() {
   try {
-    const data = localStorage.getItem('taskflow-activity');
+    const data = localStorage.getItem('taskforge-activity');
     return data ? JSON.parse(data) : [];
   } catch (e) {
     console.error('Failed to parse activity from localStorage', e);
