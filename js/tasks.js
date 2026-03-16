@@ -3,7 +3,7 @@
 if (typeof getStoredTasks === 'undefined') {
   window.getStoredTasks = function () {
     try {
-      const data = localStorage.getItem('taskflow-tasks');
+      const data = localStorage.getItem('taskforge-tasks');
       return data ? JSON.parse(data) : [];
     } catch {
       return [];
@@ -14,7 +14,7 @@ if (typeof getStoredTasks === 'undefined') {
 if (typeof getStoredActivity === 'undefined') {
   window.getStoredActivity = function () {
     try {
-      const data = localStorage.getItem('taskflow-activity');
+      const data = localStorage.getItem('taskforge-activity');
       return data ? JSON.parse(data) : [];
     } catch {
       return [];
@@ -23,7 +23,7 @@ if (typeof getStoredActivity === 'undefined') {
 }
 
 function saveTasks(tasks) {
-  localStorage.setItem('taskflow-tasks', JSON.stringify(tasks));
+  localStorage.setItem('taskforge-tasks', JSON.stringify(tasks));
 }
 
 function addActivityEntry(type, title, description) {
@@ -34,7 +34,7 @@ function addActivityEntry(type, title, description) {
     description,
     timestamp: new Date().toISOString()
   });
-  localStorage.setItem('taskflow-activity', JSON.stringify(activity));
+  localStorage.setItem('taskforge-activity', JSON.stringify(activity));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
