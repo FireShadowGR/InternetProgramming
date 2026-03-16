@@ -3,7 +3,7 @@
 if (typeof getStoredTasks === 'undefined') {
   window.getStoredTasks = function () {
     try {
-      const data = localStorage.getItem('taskflow-tasks');
+      const data = localStorage.getItem('taskforge-tasks');
       return data ? JSON.parse(data) : [];
     } catch {
       return [];
