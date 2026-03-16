@@ -17,8 +17,8 @@ TaskForge is organized around a simple **task allocation model**:
   - Unique ID
 
 - Tasks are **stored in the browser** using `localStorage`, under keys:
-  - `taskflow-tasks` (task list)
-  - `taskflow-activity` (latest activity log)
+  - `taskforge-tasks` (task list)
+  - `taskforge-activity` (latest activity log)
 
 - All pages that need task data read from these keys using shared helper functions in `main.js`, so the same data is available on:
   - `index.html` (Home – Today at a glance, Latest Activity, mini overview)
@@ -128,7 +128,7 @@ This design keeps the original data unchanged and makes the rendering logic easy
   }
   ```
 
-- Activities are stored in `localStorage` under `taskflow-activity`.
+- Activities are stored in `localStorage` under `taskforge-activity`.
 
 **How entries are created**
 
@@ -143,7 +143,7 @@ This design keeps the original data unchanged and makes the rendering logic easy
 **Rendering on Home**
 
 - On `index.html`, the “Latest Activity” section is rendered using a small block of logic in `main.js`:
-  - Reads the last N entries (e.g. last 5) from `taskflow-activity`.
+  - Reads the last N entries (e.g. last 5) from `taskforge-activity`.
   - Reverses them so the newest is on top.
   - For each entry, creates a `<div>` inside `.list-group` with:
     - Title (task name)
@@ -191,8 +191,6 @@ For the “page of your choice”, this project uses **`analytics.html`** as a s
 The project is hosted on GitHub at:
 
 > https://github.com/FireShadowGR/InternetProgramming
-
-(Replace this link if you change the repository name.)
 
 The repository contains:
 
@@ -252,7 +250,7 @@ I captured results for both **mobile** and **desktop**.
 - I decided to address the most important issues:
   - Ensured proper `alt` text on images and labels on form inputs.
   - Implemented dark mode with sufficient contrast using CSS variables.
-- A few advanced recommendations (like further reducing third‑party JS or adding more ARIA landmarks) were noted but left for future improvement, as they are not required for this assignment and would complicate the codebase.
+- A few advanced recommendations (like further reducing third‑party JS or adding more ARIA landmarks) were noted but left for future improvement, as it and would complicate the codebase.
 
 
 ## 5. Reflection on Development and Challenges
